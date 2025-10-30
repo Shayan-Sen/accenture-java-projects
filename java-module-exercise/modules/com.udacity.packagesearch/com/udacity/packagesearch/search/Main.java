@@ -23,7 +23,7 @@ public class Main {
 
 		System.out.printf("Found %d available rooms%n", availableRooms.size());
 
-/* Uncomment this code on part 4
+
 		Optional<Reservation> first = availableRooms.stream().findFirst();
 
 		if (first.isPresent()) {
@@ -37,6 +37,6 @@ public class Main {
 
 			System.out.println(managersName);
 		}
-*/
+
 	}
 }
