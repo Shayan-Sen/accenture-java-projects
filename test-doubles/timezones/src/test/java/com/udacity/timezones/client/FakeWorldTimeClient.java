@@ -7,15 +7,15 @@ import java.util.Map;
 public class FakeWorldTimeClient implements WorldTimeClient {
     private int numberOfCalls = 0;
 
-    private Map<String,List<String>> area = new HashMap<>();
+    private Map<String,List<String>> timeMap = new HashMap<>();
 
-    FakeWorldTimeClient(){}
-    FakeWorldTimeClient(Map<String,List<String>> area){this.area =area;}
+    public FakeWorldTimeClient(){}
+    public FakeWorldTimeClient(Map<String,List<String>> timeMap){this.timeMap =timeMap;}
 
     @Override
     public List<String> getValidTimeZones(String area) {
         numberOfCalls++;
-        return List.of(area);
+        return timeMap.get(area);
     }
     public int getNumberOfCalls(){return numberOfCalls;}
 }
