@@ -40,7 +40,12 @@ class ChargeServiceTest {
                         new TicketItem("Soda", new BigDecimal("10.0"), new BigDecimal("1.0")),
                         new TicketItem("Soda", new BigDecimal("12.0"), new BigDecimal("1.2"))),
                         new BigDecimal("1.50"),new BigDecimal("0.25"),new BigDecimal("25.45")
-        ));
+        ),
+                Arguments.of("a",List.of(
+                        new TicketItem("",BigDecimal.ZERO,BigDecimal.ZERO),
+                        new TicketItem("",BigDecimal.ZERO,BigDecimal.ZERO)),
+                        BigDecimal.ZERO,BigDecimal.ZERO,BigDecimal.ZERO)
+                );
     }
 
 }
